@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+)
 
 func main() {
 	/*var a1 int = 52
@@ -15,7 +18,7 @@ func main() {
 
 	fmt.Println("a1:", a1, " a2:", a2, " a3:", a3, " a4:", a4)*/
 
-	v := "start"
+	/*v := "start"
 
 	switch v {
 	case "start":
@@ -35,5 +38,20 @@ func main() {
 		break
 	default:
 		break
+	}*/
+	for i := 1; i <= 100; i++ {
+		fmt.Println(i)
+		if i == rand.Intn(10) {
+			break
+		}
+	}
+	i := 0
+	fmt.Println("\n")
+	for {
+		i++
+		fmt.Println(i)
+		if i == rand.Intn(35) {
+			break
+		}
 	}
 }
