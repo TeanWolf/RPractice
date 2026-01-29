@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"math/rand"
 )
 
 func main() {
@@ -55,7 +54,7 @@ func main() {
 		}
 	}*/
 
-	N, sum, pol, otr := 7, 0, 0, 0
+	/*N, sum, pol, otr := 7, 0, 0, 0
 	for i := 0; i <= N; i++ {
 		j := rand.Intn(100)
 		fmt.Println("Ваше число ", i, ": ", j)
@@ -69,5 +68,16 @@ func main() {
 
 	fmt.Println("Сумма всех чисел:", sum)
 	fmt.Println("Сумма четных чисел:", pol)
-	fmt.Println("Сумма нечетных чисел:", otr)
+	fmt.Println("Сумма нечетных чисел:", otr)*/
+	a, b := 2, 5
+	fmt.Println("Сумма чисел равна:", hello(a, b))
+}
+
+func hello(a int, b int) int {
+	defer fmt.Println("Функция завршена1")
+	defer func() {
+		fmt.Println("Функция завершена 2")
+	}()
+	fmt.Println("Привет мир!")
+	return a + b
 }
