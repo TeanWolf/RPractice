@@ -39,7 +39,7 @@ func main() {
 	default:
 		break
 	}*/
-	for i := 1; i <= 100; i++ {
+	/*for i := 1; i <= 100; i++ {
 		fmt.Println(i)
 		if i == rand.Intn(10) {
 			break
@@ -53,5 +53,21 @@ func main() {
 		if i == rand.Intn(35) {
 			break
 		}
+	}*/
+
+	N, sum, pol, otr := 7, 0, 0, 0
+	for i := 0; i <= N; i++ {
+		j := rand.Intn(100)
+		fmt.Println("Ваше число ", i, ": ", j)
+		if j%2 == 0 {
+			pol = pol + j
+		} else {
+			otr = otr + j
+		}
+		sum = sum + j
 	}
+
+	fmt.Println("Сумма всех чисел:", sum)
+	fmt.Println("Сумма четных чисел:", pol)
+	fmt.Println("Сумма нечетных чисел:", otr)
 }
