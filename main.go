@@ -1,9 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
 func main() {
 	/*var a1 int = 52
 	var a2 string = "FALSE"
@@ -72,29 +68,19 @@ func main() {
 	/*a, b := 2, 5
 	fmt.Println("Сумма чисел равна:", hello(a, b))*/
 
-	number := 10
+	/*var a int = 23
 
-	pointer := &number
+	p := &a
 
-	*pointer = 20
-
-	fmt.Println(number)
-	fmt.Println("n:", *pointer)
-	fmt.Println(pointer)
-
-	a, b := 5, 10
-
-	swap(&a, &b)
-
-	fmt.Println("a:", a, "\nb:", b)
+	swap(p)
+	println(a)*/
 }
 
-func swap(a *int, b *int) {
-	tmp := *a
-	*a = *b
-	*b = tmp
-	fmt.Println("a:", *a, "\nb:", *b)
-}
+/*func swap(p *int) {
+	println("a1:", *p)
+	*p = 25
+	println("a2:", *p)
+}*/
 
 /*func hello(a int, b int) int {
 	defer fmt.Println("Функция завршена1")
