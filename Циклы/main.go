@@ -1,0 +1,79 @@
+package main
+
+import (
+	"fmt"
+	"math/rand"
+)
+
+type User struct {
+	Name      string
+	Age       int
+	isPremium bool
+}
+
+func main() {
+	v := "start"
+
+	switch v {
+	case "start":
+		a1 := -2
+
+		if a1 > 0 && a1 != 0 {
+			fmt.Println("Число положительное!")
+		} else if a1 < 0 && a1 != 0 {
+			fmt.Println("Число отрицательное!")
+		} else {
+			fmt.Println("Число равно 0")
+		}
+	case "stop":
+		fmt.Println("Приложение остановлено!")
+	case "exit":
+		fmt.Println("Выход из приложения! ")
+		break
+	default:
+		break
+	}
+	for i := 1; i <= 100; i++ {
+		fmt.Println(i)
+		if i == rand.Intn(10) {
+			break
+		}
+	}
+	i := 0
+	fmt.Println("\n")
+	for {
+		i++
+		fmt.Println(i)
+		if i == rand.Intn(35) {
+			break
+		}
+	}
+
+	N, sum, pol, otr := 7, 0, 0, 0
+	for i := 0; i <= N; i++ {
+		j := rand.Intn(100)
+		fmt.Println("Ваше число ", i, ": ", j)
+		if j%2 == 0 {
+			pol = pol + j
+		} else {
+			otr = otr + j
+		}
+		sum = sum + j
+	}
+
+	fmt.Println("Сумма всех чисел:", sum)
+	fmt.Println("Сумма четных чисел:", pol)
+	fmt.Println("Сумма нечетных чисел:", otr)
+}
+
+/*a, b := 2, 5
+fmt.Println("Сумма чисел равна:", hello(a, b))*/
+
+/*func hello(a int, b int) int {
+	defer fmt.Println("Функция завршена1")
+	defer func() {
+		fmt.Println("Функция завершена 2")
+	}()
+	fmt.Println("Привет мир!")
+	return a + b
+}*/
